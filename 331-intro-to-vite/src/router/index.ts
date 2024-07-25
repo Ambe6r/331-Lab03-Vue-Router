@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import EventListView from '@/views/EventListView.vue'
 import AboutView from '@/views/AboutView.vue'
 import StudentView from '@/views/StudentListView.vue'
+import EventDetailView from '@/views/EventDetailView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,9 +13,10 @@ const router = createRouter({
       component: EventListView
     },
     {
-      path: '/event/5928101',
+      path: '/event/:id',
       name: 'event-detail-view',
-      component: 'EventDetailView'
+      component: EventDetailView,
+      props: true
     },
     {
       path: '/about',
