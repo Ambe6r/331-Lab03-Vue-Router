@@ -10,6 +10,14 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink :to="{ name: 'event-list-view' }">Event</RouterLink> |
           <RouterLink :to="{ name: 'about' }">About</RouterLink> |
           <RouterLink :to="{ name: 'student' }">Student</RouterLink>
+          <br>
+          <span>Event number: </span>
+          <RouterLink :to="{ name: 'event-list-view', query: { perPage: 1 } }">1</RouterLink> |
+          <RouterLink :to="{ name: 'event-list-view', query: { perPage: 2 } }">2</RouterLink> |
+          <RouterLink :to="{ name: 'event-list-view', query: { perPage: 3 } }">3</RouterLink> |
+          <RouterLink :to="{ name: 'event-list-view', query: { perPage: 4 } }">4</RouterLink> |
+          <RouterLink :to="{ name: 'event-list-view', query: { perPage: 5 } }">5</RouterLink> |
+          <RouterLink :to="{ name: 'event-list-view', query: { perPage: 6 } }">6</RouterLink>
         </nav>
       </div>
     </header>
